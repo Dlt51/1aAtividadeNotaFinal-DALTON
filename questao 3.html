@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> questao 3</title>
+
+</head>
+<body>
+    <div class="formulario">
+        <h2>Formulário de Contato</h2>
+
+            <input type="text" id="nome" name="nome" placeholder="Nome" required>
+           
+            
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            
+
+            <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem..." required></textarea>
+            
+
+            <button onclick="validarFormulario()">Enviar</button>
+            
+            <p id="resposta"></p>
+        </form>
+    </div>
+
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #005f73;
+        }
+        
+        h2 {
+            color: #3d1010;
+        }
+
+        .formulario {
+            background-color: #9aafdd62;
+            padding: 25px;
+            border-radius: 20px;
+            width: 300px;
+            text-align: center;
+        }
+
+        input {
+            width: calc(100% - 16px); /* Define a largura do elemento para ocupar 100% do formulaio e menos 16px de margem */
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 14px;
+
+            }
+        
+        #mensagem {
+            width: calc(100% - 16px);
+            margin-bottom: 15px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            resize: none; /* Impede que possa mudar o tamanho do retangulo da msg */
+            height: 80px; /* Deixa a caixa pra msg maior */
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #b37b4c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+
+        }
+        
+        #resposta{
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .erro {
+            color: #ff4d4d;
+        }
+
+        .sucesso {
+            color: #28a745;
+        }
+        
+        
+
+    </style>
+    <script>
+        function validarFormulario() {
+            const nome = document.getElementById("nome").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const mensagem = document.getElementById("mensagem").value.trim();
+            const verifica = document.getElementById("resposta");
+
+            // Verifica se todos os campos estão preenchidos e se o email é válido
+            if (nome && email.includes('@') && email.includes('.') && mensagem) {
+                verifica.textContent = "Formulário enviado com sucesso!";
+                verifica.className = "sucesso";
+            
+            } else {
+                verifica.textContent = "Por favor, preencha todos os campos corretamente.";
+                verifica.className = "erro";
+            }
+        }
+    </script>
+</body>
+</html>

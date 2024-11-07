@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 1</title>
+</head>
+<body>
+    
+    <div class="quadrado">
+        <h1>Dalton Batista</h1>
+        <big> <p>Ciência da Computação</p></big>
+
+        <div class="matricula">
+            <p><strong>Matrícula:</strong> 202402970798</p>
+        </div>
+
+        <p>Olá, me chamo Dalton e gosto muito da tecnologia, sempre busco aprender e acompanhar as novidades. Gosto de desafios e acredito que a tecnologia tem o poder de transformar o mundo e melhorar o dia a dia.</p>
+        
+        <div class="retangulos">
+            <div class="retangulo">HTML</div>
+            <div class="retangulo">CSS</div>
+            <div class="retangulo">JavaScript</div>
+        </div>
+
+        <div class="link">
+            <a href="https://github.com/Dlt51" target="">
+                <p>GitHub</p>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<style>
+body {
+    background-color: rgb(184, 184, 184);
+}
+
+.quadrado {
+    width: 600px;
+    height: 700px;
+    background-color: #b4b4b4;
+    border-radius: 15px;
+    margin: 80px auto 0;
+    text-align: center;
+    box-shadow: 0 -1px 23px #00000080;
+    padding: 20px;
+}
+
+h1 {
+    color: #a52a2a;
+    padding-top: 20px;
+}
+
+.matricula {
+    color: #ad322e;
+    font-weight: bold;   
+}
+
+p {
+    font-size: 23px;
+    margin: 10px 0 5px;
+    padding: 20px;
+}
+
+.link {
+    margin-top: 30px; /* Distância do link em relação aos retângulos */
+}
+
+.retangulos {
+    display: flex;
+    justify-content: space-between; /* Coloca os quadrados um ao lado do outro */
+    margin-top: 90px; /* Distância para afastar os retângulos do conteúdo acima */
+}
+
+.retangulo {
+    display: inline-block;
+    background-color: #a53636;
+    color: white;
+    padding: 15px 10px;
+    border-radius: 50px;
+    margin: 5px;
+    text-align: center;
+    width: 23%; /* Garantir que 3 quadrados caibam lado a lado */
+}
+</style>
